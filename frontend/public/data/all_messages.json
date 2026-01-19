@@ -1,0 +1,167 @@
+[
+  {
+    "timestamp": "2023-08-13T01:03:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "thanks for staying up 🖤",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 1,
+    "reply_latency_seconds": null
+  },
+  {
+    "timestamp": "2023-08-13T01:05:00",
+    "sender_id": "You",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "always",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 1,
+    "reply_latency_seconds": 120.0
+  },
+  {
+    "timestamp": "2023-08-13T01:30:00",
+    "sender_id": "Partner",
+    "platform": "instagram",
+    "type": "text",
+    "content": "look at this 😂",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 1,
+    "reply_latency_seconds": 1500.0
+  },
+  {
+    "timestamp": "2023-08-13T01:32:05",
+    "sender_id": "You",
+    "platform": "instagram",
+    "type": "text",
+    "content": "okay this is us",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 1,
+    "reply_latency_seconds": 125.0
+  },
+  {
+    "timestamp": "2023-08-13T02:30:00",
+    "sender_id": "Partner",
+    "platform": "instagram",
+    "type": "image",
+    "content": "[1 photo(s)]",
+    "media_count": 1,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 2,
+    "reply_latency_seconds": 3475.0
+  },
+  {
+    "timestamp": "2023-12-08T22:41:00",
+    "sender_id": "You",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "did you reach home?",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 22,
+    "reply_latency_seconds": 10181460.0
+  },
+  {
+    "timestamp": "2023-12-08T22:43:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "yes just now",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 22,
+    "reply_latency_seconds": 120.0
+  },
+  {
+    "timestamp": "2023-12-08T22:44:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "exhausted 😅",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 22,
+    "reply_latency_seconds": null
+  },
+  {
+    "timestamp": "2023-12-08T22:45:00",
+    "sender_id": "You",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "long day?",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 22,
+    "reply_latency_seconds": 60.0
+  },
+  {
+    "timestamp": "2023-12-08T22:46:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "yeah meetings all day",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 22,
+    "reply_latency_seconds": 60.0
+  },
+  {
+    "timestamp": "2023-12-08T22:47:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "image",
+    "content": "<Media omitted>",
+    "media_count": 1,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 22,
+    "reply_latency_seconds": null
+  },
+  {
+    "timestamp": "2023-12-08T23:02:00",
+    "sender_id": "You",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "worth it though?",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 23,
+    "reply_latency_seconds": 900.0
+  },
+  {
+    "timestamp": "2023-12-08T23:10:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "yeah, mostly",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 23,
+    "reply_latency_seconds": 480.0
+  },
+  {
+    "timestamp": "2023-12-08T23:11:00",
+    "sender_id": "Partner",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "wanna call?",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 23,
+    "reply_latency_seconds": null
+  },
+  {
+    "timestamp": "2023-12-08T23:12:00",
+    "sender_id": "You",
+    "platform": "whatsapp",
+    "type": "text",
+    "content": "yeah\n12/08/23, 23:12 - Messages and calls are end-to-end encrypted.",
+    "media_count": 0,
+    "call_duration_seconds": null,
+    "hour_of_day_local": 23,
+    "reply_latency_seconds": 60.0
+  }
+]

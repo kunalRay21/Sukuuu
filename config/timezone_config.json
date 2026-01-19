@@ -1,0 +1,18 @@
+{
+  "You": [
+    {
+      "start": "2023-01-01",
+      "end": "2023-09-01",
+      "timezone": "Europe/Berlin",
+      "location": "Berlin"
+    }
+  ],
+  "Partner": [
+    {
+      "start": "2023-01-01",
+      "end": "2023-09-01",
+      "timezone": "America/Toronto",
+      "location": "Toronto"
+    }
+  ]
+}
