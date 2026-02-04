@@ -1,32 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import MessageTimeline from "@/components/MessageTimeline";
+import { useAppStore } from "@/lib/store";
+import SettingsBar from "@/components/SettingsBar";
 
 export default function TimelinePage() {
-  const [dataLoaded, setDataLoaded] = useState(false);
-  const [messageData, setMessageData] = useState<any[]>([]);
+  const { dataLoaded, loadData } = useAppStore();
 
   useEffect(() => {
     loadData();
   }, []);
 
-  const loadData = async () => {
-    try {
-      const response = await fetch("/data/all_messages.json");
-      if (response.ok) {
-        const data = await response.json();
-        setMessageData(data);
-        setDataLoaded(true);
-      }
-    } catch (error) {
-      console.log("Data not yet available.");
-    }
-  };
-
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 relative">
+      <SettingsBar />
+
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,9 +35,11 @@ export default function TimelinePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white rounded-xl shadow-sm p-8 border border-gray-200"
+          className="bg-white rounded-xl shadow-sm p-4 border border-gray-200"
         >
-          <MessageTimeline data={messageData} />
+          {/* MessageTimeline now reads from store internaly, but we can pass props if needed. 
+              The refactored MessageTimeline uses useAppStore() directly. */}
+          <MessageTimeline />
         </motion.div>
       ) : (
         <motion.div
@@ -56,7 +48,9 @@ export default function TimelinePage() {
           transition={{ duration: 0.5 }}
           className="bg-gray-100 rounded-xl p-12 text-center"
         >
-          <p className="text-gray-600">Loading timeline data...</p>
+          <p className="text-gray-600">
+            No data loaded. Please go to Dashboard to upload files.
+          </p>
         </motion.div>
       )}
     </div>

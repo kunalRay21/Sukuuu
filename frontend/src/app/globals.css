@@ -2,38 +2,226 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+/* Typography - Playfair Display for narrative headers, JetBrains Mono for data */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --person-a: #6366f1;
-  --person-b: #ec4899;
+  /* Person colors */
+  --person-a: #ec4899;
+  --person-b: #6366f1;
+
+  /* Base colors */
   --bg: #fafafa;
-  --text: #2d3748;
-  --accent: #f59e0b;
+  --bg-warm: #fdf8f6;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --accent: #f472b6;
+  --accent-secondary: #818cf8;
+
+  /* Emotional palette */
+  --emotion-positive: #fce7f3;
+  --emotion-neutral: #f1f5f9;
+  --emotion-love: #ffe4e6;
+  --emotion-nostalgic: #ede9fe;
+  --emotion-longing: #cffafe;
 }
 
+/* Base typography */
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Serif for narrative content */
+.font-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+/* Monospace for data labels */
+.font-mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Narrative text styles */
 .narrative-text {
-  font-family: "Merriweather", Georgia, serif;
-  font-size: 1.125rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.narrative-quote {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 1.5rem;
   line-height: 1.8;
+  color: var(--text-muted);
 }
 
+/* Section titles with dramatic serif */
 .section-title {
-  font-family: "Merriweather", Georgia, serif;
-  font-size: 2.5rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* Data labels */
+.data-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Glassmorphism tooltip */
+.glass-tooltip {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+}
+
+/* Snapshot mode - removes all UI chrome */
+.snapshot-mode {
+  overflow: hidden !important;
+}
+
+.snapshot-mode .hide-in-snapshot,
+.snapshot-mode nav,
+.snapshot-mode button:not(.snapshot-include),
+.snapshot-mode .ui-chrome {
+  display: none !important;
+}
+
+/* Scrollytelling smooth scroll */
+.scrollytelling-container {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+.scrollytelling-section {
+  scroll-snap-align: start;
+}
+
+/* Organic blob shapes */
+.organic-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Heartbeat pulse for emotional moments */
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.05);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Tether glow effect */
+@keyframes tether-glow {
+  0%,
+  100% {
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(8px);
+  }
+}
+
+.tether-glow {
+  animation: tether-glow 3s ease-in-out infinite;
+}
+
+/* Print-ready styles for snapshot export */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .glass-card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+}
+
+/* Utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
   }
 }

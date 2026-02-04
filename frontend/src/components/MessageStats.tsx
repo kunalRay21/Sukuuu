@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import * as d3 from "d3";
+import { theme } from "@/config/theme";
 
 interface MessageStatsProps {
   data: any[];
@@ -60,9 +61,15 @@ export default function MessageStats({ data }: MessageStatsProps) {
   }
 
   const colors = {
-    sender: ["#6366f1", "#ec4899"],
-    platform: ["#f59e0b", "#10b981"],
-    type: ["#3b82f6", "#8b5cf6", "#ef4444", "#14b8a6", "#f97316"],
+    sender: [theme.colors.primary[500], theme.colors.secondary[500]],
+    platform: [theme.colors.warning, theme.colors.success],
+    type: [
+      theme.colors.primary[500],
+      theme.colors.secondary[500],
+      theme.colors.error,
+      theme.colors.primary[300],
+      theme.colors.secondary[300],
+    ],
   };
 
   const getIcon = (type: string, name: string) => {
